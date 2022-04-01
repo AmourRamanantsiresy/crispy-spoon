@@ -9,7 +9,7 @@ function sort(array) {
   const middle = Math.floor(array.length / 2); //3
   const left = slice(array, 0, middle); // O(n) + 2 
   const right = slice(array, middle, array.length); // O(n) + 3        
-  return merge(sort(left), sort(right)); // O(n) * array.length
+  return merge(sort(left), sort(right)); // O(n) + O(n) * array.length
 }
 
 const array = generateUnorderedArray(10); // O(n^2) + 1
